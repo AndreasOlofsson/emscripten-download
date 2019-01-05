@@ -1,12 +1,12 @@
 {
   "name": "emscripten-download",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Allows the Emscripten compiler to be bundled as a dependency",
   "bin": {
-    "emcc": "./bin/emsdk-portable/emscripten/1.37.33/emcc",
-    "em++": "./bin/emsdk-portable/emscripten/1.37.33/em++",
-    "emmake": "./bin/emsdk-portable/emscripten/1.37.33/emmake",
-    "emrun": "./bin/emsdk-portable/emscripten/1.37.33/emrun"
+    "emcc": "./bin/emsdk-portable/emscripten/1.38.21/emcc",
+    "em++": "./bin/emsdk-portable/emscripten/1.38.21/em++",
+    "emmake": "./bin/emsdk-portable/emscripten/1.38.21/emmake",
+    "emrun": "./bin/emsdk-portable/emscripten/1.38.21/emrun"
   },
   "keywords": [
     "emcc",
@@ -18,7 +18,7 @@
     "wasm"
   ],
   "scripts": {
-    "preinstall": "node ./lib/download && ./bin/emsdk-portable/emsdk install sdk-1.37.33-64bit && ./bin/emsdk-portable/emsdk activate sdk-1.37.33-64bit",
+    "preinstall": "node lib/install",
     "test": "mocha"
   },
   "author": "Jake <jakepyne@gmail.com>",
@@ -38,6 +38,6 @@
   },
   "emsdk": {
     "url": "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz",
-    "version": "1.37.33"
+    "version": "1.38.21"
   }
 }
